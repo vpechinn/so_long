@@ -6,7 +6,7 @@
 /*   By: vpechinn <vpechinn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:43 by vpechinn          #+#    #+#             */
-/*   Updated: 2024/02/21 21:01:23 by vpechinn         ###   ########.fr       */
+/*   Updated: 2024/03/23 20:16:00 by vpechinn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,37 +78,39 @@ char	*ft_strjoin(char *s1, char *s2);
 char	*ft_sp(char	*st_str);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 
-void	ft_putnbr(int n);
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
+// void	ft_putnbr(int n);
+// void	ft_putchar(char c);
+// void	ft_putstr(char *str);
 void	ft_load_img(t_game *game);
-void	ft_draw_map(t_game *game, int x, int y);
-void	ft_draw_enemy(t_game *game);
-void	ft_draw_tile_2(t_game *game, void *tile2, int y, int x);
-void	ft_draw_tile(t_game *game, void *tile, int y, int x);
-int		ft_render(t_game *game);
-int		ft_count_height(t_game *game, char *argv);
-void	ft_print_steps(t_game *game);
+// void	ft_draw_map(t_game *game, int x, int y);
+// void	ft_draw_enemy(t_game *game);
+// void	ft_draw_tile_2(t_game *game, void *tile2, int y, int x);
+// void	ft_draw_tile(t_game *game, void *tile, int y, int x);
+// int		ft_render(t_game *game);
+// void	ft_print_steps(t_game *game);
 
 size_t	ft_strlen(const char *s);
 
-int		ft_hooks(int key, t_game *game);
-int		ft_errors(int num);
-int		ft_strlen_map(const char *s);
-// int		ft_valid_wall(char **game, int height, int k);
-// int		ft_valid_count_tile(t_game *game);
-int		ft_valid_character(t_game *game, int i, int j);
-int		ft_valid_tile(t_game *game);
+// int		ft_hooks(int key, t_game *game);
+// int		ft_errors(int num);
+// int		ft_strlen_map(const char *s);
+// // int		ft_valid_wall(char **game, int height, int k);
+// // int		ft_valid_count_tile(t_game *game);
+// int		ft_valid_character(t_game *game, int i, int j);
+// int		ft_valid_tile(t_game *game);
 int		ft_name_map(char *argv);
+int		ft_count_height(t_game *game, char *argv);
+
 
 void	ft_check_wall(char **map, int height);
 void	ft_count_charect(t_game *game);
 void	ft_check_rectangle(char **game, int	height);
-void	ft_check_pos(t_game *game, int i, int j);
-void	ft_check_pos_enemy(t_game *game, int i, int j);
-void	ft_check_pos_wenemy(t_game *game, int i, int j);
-void	ft_for_enemy(t_game *game);
-void	ft_close_game(t_game *game);
-void	ft_close(char **game);
+void	ft_check_charact(t_game *game);
+// void	ft_check_pos(t_game *game, int i, int j);
+// void	ft_check_pos_enemy(t_game *game, int i, int j);
+// void	ft_check_pos_wenemy(t_game *game, int i, int j);
+// void	ft_for_enemy(t_game *game);
+// void	ft_close_game(t_game *game);
+// void	ft_close(char **game);
 
 #endif

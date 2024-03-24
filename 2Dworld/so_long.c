@@ -6,7 +6,7 @@
 /*   By: vpechinn <vpechinn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 18:50:38 by vpechinn          #+#    #+#             */
-/*   Updated: 2024/02/22 19:37:15 by vpechinn         ###   ########.fr       */
+/*   Updated: 2024/03/23 20:14:04 by vpechinn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,13 @@ void	ft_read_map(char *argv, t_game *game)
 	while (i < game->game_map.height)
 	{
 		game->game_map.array[i] = get_next_line(fd);
-		printf("str=%s\n", game->game_map.array[i]);
+		// printf("str=%s\n", game->game_map.array[i]);
 		i++;
 	}
 	ft_check_rectangle(game->game_map.array, game->game_map.height);
 	ft_check_wall(game->game_map.array, game->game_map.height);
 	ft_count_charect(game);
-
+	ft_load_img(game);
 }
 
 int	main(int argc, char **argv)
@@ -64,7 +64,7 @@ int	main(int argc, char **argv)
 
 	game = malloc(sizeof(t_game));
 	if (game == NULL)
-		return (NULL);
+		return (0);
 	if (argc > 1)
 		ft_read_map(argv[1], game);
 	else
@@ -72,7 +72,7 @@ int	main(int argc, char **argv)
 		write(2, "Error\n No args", 15);
 		exit (0);
 	}
-	// mlx_hook(game->mlx_win, 2, 1L << 0, ft_hooks, game);
-	// game->images.frame = 0;
+	//mlx_hook(game->mlx_win, 2, 1L << 0, ft_hooks, game);
+	//game->images.frame = 0;
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: vpechinn <vpechinn@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 17:36:42 by vpechinn          #+#    #+#             */
-/*   Updated: 2024/02/22 19:47:05 by vpechinn         ###   ########.fr       */
+/*   Updated: 2024/03/23 19:59:45 by vpechinn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,13 +86,14 @@ void	ft_count_charect(t_game *game)
 		}
 		i++;
 	}
+	ft_check_charact(game);
 }
 
-void	ft_check_character(t_game *game)
+void	ft_check_charact(t_game *game)
 {
-	int	i;
-	int	j;
-	int	width;
-
-	
+	if (game->game_map.coin < 1 || game->game_map.player != 1 || game->game_map.exit != 1)
+	{
+		write(2, "Error \n wrong character", 24);
+		exit(0);
+	}
 }
